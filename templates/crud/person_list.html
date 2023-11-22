@@ -8,13 +8,11 @@
 <h1>Список людей</h1>
 <button><a href="/create_person/">Добавить</a></button>
 <ul>
-    {% for i in person  %}
+    {% for i in object_list %}
     <li>
     <h1>{{i.name}}</h1>
     <p>{{i.age}}</p>
-    <p>{{i.hobby}}</p>
-    <p>{{i.gender}}</p>
-    <p>{{i.phone_number}}</p>
+        <button><a href="/person_list/{{i.id}}/">Подробнее</a></button>
         <button><a href="/create_person/">Добавить</a></button>
         <button><a href="/person_list/{{i.id}}/delete/">Удалить</a></button>
         <button><a href="/person_list/{{i.id}}/update/">Изменить</a></button>
